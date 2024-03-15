@@ -27,10 +27,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-CORS_ALLOWED_ORIGINS =[
-    "http://localhost:5173",
-    "http://localhost:8000",
-]
 
 # Application definition
 
@@ -41,7 +37,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "books.apps.BooksConfig",
+    "books",
     "rest_framework",
     "corsheaders",
 ]
@@ -56,6 +52,11 @@ MIDDLEWARE = [
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
+
+# REST_FRAMEWORK = { 'DEFAULT_PERMISSION_CLASSES': [
+#     'rest_framework.permission.AllowAny']}
+
+CORS_ORIGIN_ALLOW_ALL = True
 
 ROOT_URLCONF = "sitemate.urls"
 
